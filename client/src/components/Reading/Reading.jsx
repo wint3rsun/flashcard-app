@@ -16,7 +16,7 @@ export default function Reading() {
   const showFlashcards = () => {
     setMode(MODE.viewFlashcards);
   }
-
+  
   const quitRound = () => {
     setMode(MODE.viewMap);
   }
@@ -27,6 +27,7 @@ export default function Reading() {
         mode === MODE.viewMap &&
         <>
           <h2>Reading Practice!</h2>
+          <h3>HSK 1</h3>
           <ul>
             <li>
             <section className="lvl-section border rounded-circle d-flex flex-column justify-content-center">
