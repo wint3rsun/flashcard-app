@@ -1,15 +1,7 @@
 import "./Flashcard.css"
 
-export default function Flashcard({quitRound}) {
-  const flashcard = {
-    1:{
-      id: 1,
-      side1: "你好",
-      side2: "Nǐ hǎo",
-      side3: "hello",
-      img: ""
-    }
-  }
+export default function Flashcard({quitRound, flashcard}) {
+
 
   const flipFlashcard = (id) => {
     const element = document.getElementById(`${id}`);
@@ -24,7 +16,7 @@ export default function Flashcard({quitRound}) {
           <img src="logo57.png" className="card-img-top" alt="logo"/>
           <div className="card-body">
             <h5 className="card-title">Question</h5>
-            <p className="card-text fs-1">{flashcard[1].side1} <i className="bi bi-volume-up"></i> </p>
+            <p className="card-text fs-1">{flashcard[1].character} <i className="bi bi-volume-up"></i> </p>
             <button onClick={()=>flipFlashcard(flashcard[1].id)} className="btn btn-primary">Flip</button>
             <button className="btn btn-primary disabled">Star</button>
           </div>
@@ -34,7 +26,7 @@ export default function Flashcard({quitRound}) {
           <img src="logo57.png" className="card-img-top" alt="logo"/>
           <div className="card-body">
             <h5 className="card-title">Answer</h5>
-            <p className="card-text fs-1">{flashcard[1].side2} <i className="bi bi-volume-up"></i></p>
+            <p className="card-text fs-1">{flashcard[1].pinyin} <i className="bi bi-volume-up"></i></p>
             <div className="d-flex justify-content-around">
               <button className="btn btn-success">Right</button>
               <button className="btn btn-danger">Wrong</button>
