@@ -7,4 +7,14 @@
 .lvl-section {
   width: 200px;
   height: 200px;
+  background-color: beige;
+}
+
+.test {
+  width: 5px;
+  height: 31.5vh;
+  background-color: black;
+  left: 100px;
+  top:200px;
+  z-index: -100;
 }
